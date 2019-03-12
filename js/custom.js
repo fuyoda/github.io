@@ -27,7 +27,7 @@
 
     //Smooth
     KerriApp.prototype.initSmoothLink = function() {
-        $('.navbar-nav a').on('click', function(event) {
+        $('.navbar-nav a, .inner-link').on('click', function(event) {
             var $anchor = $(this);
             $('html, body').stop().animate({
                 scrollTop: $($anchor.attr('href')).offset().top - 0
