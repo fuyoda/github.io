@@ -289,9 +289,13 @@ button:focus {
     padding: 15px 0px;
 }
 
-.custom-nav.stickyadd .navbar-nav li a {
+.custom-nav.stickyadd .navbar-nav li a{
     color: rgba(0, 0, 0, 0.6) !important;
 }
+.stickyadd .mdi-menu{
+    color: rgba(0, 0, 0, 0.6) !important;
+}
+
 
 /*===========================
         4.HOME
@@ -331,9 +335,12 @@ button:focus {
 }
 
 .header-content h1, .header-content span{
-    text-shadow: 0.1rem 0.1rem 0.8rem rgba(253, 253, 158, 0.829);
+    text-shadow: 0.1rem 0.1rem 0.8rem rgba(2, 2, 2, 0.829);
 }
 
+.inner-link{
+    transition: all 0.5s;
+}
 
 
 
@@ -569,6 +576,7 @@ button:focus {
 }
 
 .footer .footer-alt ul li a {
+    color: #6c757d;
     border-radius: 50%;
     transition: all 0.5s;
     background-color: rgba(241, 241, 241, 0.08);
@@ -578,6 +586,11 @@ button:focus {
     font-size: 18px;
     line-height: 42px;
     text-align: center;
+}
+
+.footer .footer-alt  li a:hover {
+    color: #e65f78;
+    border-color: #e65f78;
 }
 
 /*===========================
