@@ -29,6 +29,9 @@
 
         <!-- Custom style Css -->
         <link href="css/style.css" rel="stylesheet">
+
+        <!-- お問い合わせフォーム -->
+        <script src="https://sdk.form.run/js/v2/formrun.js"></script>
     </head>
 
     <body>
@@ -393,46 +396,61 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="row mt-5">
                     <div class="col-lg-12">
                         <div class="form-kerri">
-                            <form>
+                            <form class="formrun" action="https://form.run/api/v1/r/zhnnq4vqn5n05cvmvtpx9jik" method="post">
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group mt-2">
-                                            <input name="name" id="name" type="text" class="form-control" placeholder="お名前*" required>
+                                            <input name="お名前" type="text" class="form-control" placeholder="お名前(必須)" autocomplete="name" required>
                                         </div>
                                     </div>
+                                
                                     <div class="col-lg-6">
                                         <div class="form-group mt-2">
-                                            <input name="email" id="email" type="email" class="form-control" placeholder="メールアドレス*" required>
+                                            <input class="form-control" name="メールアドレス" type="text" placeholder="メールアドレス(必須)" autocomplete="email" data-formrun-type="email" required>
                                         </div>
-                                    </div>                                
-                                </div>
+                                    </div>  
+                                </div>  
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="form-group mt-2">
-                                            <input type="text" class="form-control" id="subject" placeholder="題名.." required/>
+                                            <input type="text" class="form-control"  placeholder="題名（任意）" name="題名">
                                         </div>
                                     </div>
                                 </div>
+                                
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="form-group mt-2">
-                                            <textarea name="comments" id="comments" rows="4" class="form-control" placeholder="メッセージ..."></textarea>
+                                            <textarea rows="4" class="form-control" placeholder="メッセージ（必須）" name="メッセージ" required></textarea>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-12 text-right">
-                                        <a href="#" class="btn btn-custom">送信</a>
+                                        <button class="btn btn-custom" type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中...">送信</button>
                                     </div>
                                 </div>
+                                  <!-- ボット投稿をブロックするためのタグ -->
+                                <div class="_formrun_gotcha">
+                                    <style media="screen">._formrun_gotcha {position:absolute!important;height:1px;width:1px;overflow:hidden;}</style>
+                                    <label for="_formrun_gotcha">If you are a human, ignore this field</label>
+                                    <input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1">
+                                </div>
+
+
+                                
                             </form>
+                            
                         </div>  
+
                     </div>
                 </div>
-            </div>
+            </div>    
+
         </section>
         <!-- END CONTACT -->
 
@@ -444,9 +462,9 @@
                         <div class="text-center text-white footer-alt">
                             <ul class="list-unstyled list-inline mb-3">
                                 <li class="list-inline-item"><a href="https://fuyo8.theshop.jp/"><i class="mdi mdi-hexagon-outline "></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="mdi mdi-facebook "></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="mdi mdi-instagram "></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="mdi mdi-twitter "></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.facebook.com/yo.fukuda.3"><i class="mdi mdi-facebook "></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.instagram.com/yofukuda777/"><i class="mdi mdi-instagram "></i></a></li>
+                                <li class="list-inline-item"><a href="https://twitter.com/FuyodaK"><i class="mdi mdi-twitter "></i></a></li>
                             </ul>
                             <p class="text-muted mb-0">&copy; Copyright | Yo 2019 All Right Reserved</p>
                         </div>
@@ -488,6 +506,8 @@
              $('[data-toggle="tooltip"]').tooltip();
             });
         </script>
+
+
 
     </body>
 </html>
